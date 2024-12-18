@@ -568,6 +568,27 @@ class ElectrumWindow(QMainWindow, MessageBoxMixin, Logger, QtEventListener):
             ])
             self.show_warning(msg, title=_('Watch-only wallet'))
 
+    def require_password_for_lightning(self):
+        if self.wallet.requires_unlock():
+            msg = ' '.join([
+                _("This wallet is password-protected."),
+                _("It needs to be unlocked in order to use Lightning."),
+                _("Enter your password in order to unlock your wallet."),
+            ])
+            while True:
+                password = self.password_dialog(msg)
+                if not password:
+                    self.show_warning('\n'.join([
+                        _('Your wallet is still locked.'),
+                        _('It will not be able to handle channel force-closures'),
+                    ]))
+                    break
+                try:
+                    self.wallet.unlock(password)
+                    break
+                except InvalidPassword as e:
+                    self.show_error(str(e))
+
     def warn_if_testnet(self):
         if not constants.net.TESTNET:
             return

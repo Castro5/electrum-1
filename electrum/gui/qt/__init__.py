@@ -325,6 +325,7 @@ class ElectrumGui(BaseElectrumGui, Logger):
         self.build_tray_menu()
         w.warn_if_testnet()
         w.warn_if_watching_only()
+        w.require_password_for_lightning()
         return w
 
     def count_wizards_in_progress(func):

@@ -502,6 +502,11 @@ class Abstract_Wallet(ABC, Logger, EventListener):
     def has_lightning(self) -> bool:
         return bool(self.lnworker)
 
+    def requires_unlock(self):
+        return self.config.ENABLE_ANCHOR_CHANNELS\
+            and self.has_password()\
+            and self.get_unlocked_password() is None
+
     def can_have_lightning(self) -> bool:
         # we want static_remotekey to be a wallet address
         return self.txin_type == 'p2wpkh'
