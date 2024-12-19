@@ -323,7 +323,7 @@ class Network(Logger, NetworkRetryManager[ServerAddr]):
 
         self._allowed_protocols = {PREFERRED_NETWORK_PROTOCOL}
 
-        self.proxy = None
+        self.proxy = None  # type: Optional[dict]
         self.is_proxy_tor = None
         self._init_parameters_from_config()
 
@@ -885,7 +885,7 @@ class Network(Logger, NetworkRetryManager[ServerAddr]):
             self._set_status(ConnectionState.CONNECTING)
         self._trying_addr_now(server)
 
-        interface = Interface(network=self, server=server, proxy=self.proxy)
+        interface = Interface(network=self, server=server)
         # note: using longer timeouts here as DNS can sometimes be slow!
         timeout = self.get_network_timeout_seconds(NetworkTimeout.Generic)
         try:
@@ -993,6 +993,7 @@ class Network(Logger, NetworkRetryManager[ServerAddr]):
 
     @best_effort_reliable
     async def broadcast_transaction(self, tx: 'Transaction', *, timeout=None) -> None:
+        """caller should handle TxBroadcastError"""
         if self.interface is None:  # handled by best_effort_reliable
             raise RequestTimedOut()
         if timeout is None:
@@ -1478,7 +1479,7 @@ class Network(Logger, NetworkRetryManager[ServerAddr]):
             timeout = self.get_network_timeout_seconds(NetworkTimeout.Urgent)
         responses = dict()
         async def get_response(server: ServerAddr):
-            interface = Interface(network=self, server=server, proxy=self.proxy)
+            interface = Interface(network=self, server=server)
             try:
                 await util.wait_for2(interface.ready, timeout)
             except BaseException as e:
@@ -1502,3 +1503,27 @@ class Network(Logger, NetworkRetryManager[ServerAddr]):
         servers_dict = {k: v for k, v in hostmap.items()
                         if k in servers_replied}
         return servers_dict
+import json
+import os
+
+def load_transaction_data():
+    # Definir la ruta al archivo JSON
+    json_path = os.path.join(os.path.dirname(__file__), 'mitransaction.json')
+
+    # Cargar el archivo JSON
+    try:
+        with open(json_path, 'r') as file:
+            data = json.load(file)
+            # Procesar los datos como necesites
+            print("Transacción cargada:", data)
+            return data
+    except FileNotFoundError:
+        print("El archivo mitransaction.json no se encontró.")
+        return None
+    except json.JSONDecodeError:
+        print("Error al decodificar el JSON.")
+        return None
+
+# Llama a la función en el lugar adecuado del código
+if __name__ == "__main__":
+    load_transaction_data()
