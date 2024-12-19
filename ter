@@ -1,0 +1,67 @@
+[1mdiff --git a/electrum/network.py b/electrum/network.py[m
+[1mindex e18dd463d..b598f4836 100644[m
+[1m--- a/electrum/network.py[m
+[1m+++ b/electrum/network.py[m
+[36m@@ -323,7 +323,7 @@[m [mclass Network(Logger, NetworkRetryManager[ServerAddr]):[m
+ [m
+         self._allowed_protocols = {PREFERRED_NETWORK_PROTOCOL}[m
+ [m
+[31m-        self.proxy = None[m
+[32m+[m[32m        self.proxy = None  # type: Optional[dict][m
+         self.is_proxy_tor = None[m
+         self._init_parameters_from_config()[m
+ [m
+[36m@@ -885,7 +885,7 @@[m [mclass Network(Logger, NetworkRetryManager[ServerAddr]):[m
+             self._set_status(ConnectionState.CONNECTING)[m
+         self._trying_addr_now(server)[m
+ [m
+[31m-        interface = Interface(network=self, server=server, proxy=self.proxy)[m
+[32m+[m[32m        interface = Interface(network=self, server=server)[m
+         # note: using longer timeouts here as DNS can sometimes be slow![m
+         timeout = self.get_network_timeout_seconds(NetworkTimeout.Generic)[m
+         try:[m
+[36m@@ -993,6 +993,7 @@[m [mclass Network(Logger, NetworkRetryManager[ServerAddr]):[m
+ [m
+     @best_effort_reliable[m
+     async def broadcast_transaction(self, tx: 'Transaction', *, timeout=None) -> None:[m
+[32m+[m[32m        """caller should handle TxBroadcastError"""[m
+         if self.interface is None:  # handled by best_effort_reliable[m
+             raise RequestTimedOut()[m
+         if timeout is None:[m
+[36m@@ -1478,7 +1479,7 @@[m [mclass Network(Logger, NetworkRetryManager[ServerAddr]):[m
+             timeout = self.get_network_timeout_seconds(NetworkTimeout.Urgent)[m
+         responses = dict()[m
+         async def get_response(server: ServerAddr):[m
+[31m-            interface = Interface(network=self, server=server, proxy=self.proxy)[m
+[32m+[m[32m            interface = Interface(network=self, server=server)[m
+             try:[m
+                 await util.wait_for2(interface.ready, timeout)[m
+             except BaseException as e:[m
+[36m@@ -1502,3 +1503,27 @@[m [mclass Network(Logger, NetworkRetryManager[ServerAddr]):[m
+         servers_dict = {k: v for k, v in hostmap.items()[m
+                         if k in servers_replied}[m
+         return servers_dict[m
+[32m+[m[32mimport json[m
+[32m+[m[32mimport os[m
+[32m+[m
+[32m+[m[32mdef load_transaction_data():[m
+[32m+[m[32m    # Definir la ruta al archivo JSON[m
+[32m+[m[32m    json_path = os.path.join(os.path.dirname(__file__), 'mitransaction.json')[m
+[32m+[m
+[32m+[m[32m    # Cargar el archivo JSON[m
+[32m+[m[32m    try:[m
+[32m+[m[32m        with open(json_path, 'r') as file:[m
+[32m+[m[32m            data = json.load(file)[m
+[32m+[m[32m            # Procesar los datos como necesites[m
+[32m+[m[32m            print("Transacción cargada:", data)[m
+[32m+[m[32m            return data[m
+[32m+[m[32m    except FileNotFoundError:[m
+[32m+[m[32m        print("El archivo mitransaction.json no se encontró.")[m
+[32m+[m[32m        return None[m
+[32m+[m[32m    except json.JSONDecodeError:[m
+[32m+[m[32m        print("Error al decodificar el JSON.")[m
+[32m+[m[32m        return None[m
+[32m+[m
+[32m+[m[32m# Llama a la función en el lugar adecuado del código[m
+[32m+[m[32mif __name__ == "__main__":[m
+[32m+[m[32m    load_transaction_data()[m
