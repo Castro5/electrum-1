@@ -1,0 +1,761 @@
+* [33md6c67a88d[m[33m ([m[1;36mHEAD -> [m[1;32mmytransaction[m[33m)[m Descripción de los cambios
+* [33m9222c8ea7[m Mejoras en la gestión de proxy y documentación
+* [33m657199155[m[33m ([m[1;33mtag: 4.5.8[m[33m)[m prepare release 4.5.8
+* [33ma9cd9c633[m qt tx_dialog: also show high-fee warnings for self-payments
+* [33m5f2dab630[m qt rbf_dialog: set output_value properly
+* [33m8ec250e52[m[33m ([m[1;33mtag: 4.5.7[m[33m)[m prepare release 4.5.7
+* [33m93f2e8a3a[m interface: disable ssl.VERIFY_X509_STRICT for self-signed certs
+* [33m2efac4ee3[m follow-up prev: fix tests
+* [33m3a465593d[m lnpeer: maybe send update_fee right away after reestablish
+* [33m422ca01a0[m exchange_rate: add historical rates for BitStamp
+* [33m80bd03b7d[m exchange_rate: add BitFinex, which has historical rates for usd and eur
+* [33mf0750139a[m exchange_rate: fix regenerating currencies.json
+* [33mc4fe27966[m qt tx dlg: fix showing fee warnings
+* [33mfa27ccc26[m trustedcoin: fix check in 2fa wallet setup, when not continuing a unfinished wallet (fixes #9253)
+* [33m31702c63e[m[33m ([m[1;33mtag: 4.5.6[m[33m)[m android: update p4a ref
+* [33m3d5a9083c[m update release notes: add date
+* [33m84ded43ce[m prepare release 4.5.6
+* [33mf8b1da1b3[m update release notes for version 4.5.6
+* [33m3ce5d95b0[m send tab: catch exception raised if swap server is unreachable, show error to the user. (similar to main_window.run_swap_dialog)
+* [33md4765c5ed[m update block header checkpoints
+* [33m38f9e6bf3[m normal swaps message: put TLDR at the beginning!
+* [33ma486d0164[m qt: tray icon: don't show "network" if --offline
+* [33m719292f81[m hw plugins: ledger: bump pinned lib to 0.3.0, raise max_lib to <0.4
+* [33m85940e7e3[m hw plugins: cmdline: fix offline commands for encrypted hw wallets
+* [33mef62fcdd2[m hw plugins: cmdline: support numpad for trezor one PIN codes
+* [33maf18df10f[m android: update p4a ref
+* [33m5da46e908[m cli: require password for close_channel, request_force_close, export_channel_backup, reverse_swap, rebalance_channels
+* [33m84aa3eec5[m commands: require wallet password for lnpay, get_channel_ctx commands
+* [33ma1cf97992[m commands: check password already in decorator
+* [33mfa8595b1a[m set stricter UNIX permissions for log files
+* [33m70c70eec3[m contrib/release_www.sh: put android versionCode in "version" file
+* [33mdef89a90b[m contrib/release_www.sh: minor clean-up
+* [33m0d4e8f62b[m android build: exclude fastlane/ from apk
+* [33m28bfa5657[m (trivial) contrib/make_packages.sh: print success msg when done
+* [33m4dc2eb946[m android build: use spesmilo/ fork of p4a and buildozer
+* [33m477381583[m android readme: extend "access datadir on Android from desktop"
+* [33mfa1eb9f28[m update hash for winehq.key
+* [33md415d2ab8[m android build: add own logic to calculate versionCode
+* [33me72b7ca25[m version.py: rm APK_VERSION
+* [33ma3786a4f8[m chore: add fastlane metadata for f-droid (#9211)
+* [33m6ebdbf040[m android: update p4a ref
+* [33m08127a608[m android build: bump python version (3.8.18->3.10.14)
+* [33mb79ee9b0e[m android: update p4a ref
+* [33m2917fde59[m android: set target_sdk_version to 34
+* [33m7b1d088d3[m android: add comment that OS push notifications are broken
+* [33m3ec16a08e[m build: include tests/ in tarballs
+* [33m1c9d31b93[m qml: do not display success if swap failed..
+* [33m32c97145e[m revealer plugin: move font initialisation to earlier
+* [33mc187f6450[m Update Source Sans Pro font to the current Source Sans 3.
+* [33mb55c486f1[m build: update pinned qdarkstyle (partial rerun freeze_packages)
+* [33m7cc866606[m follow-up testnet4 stuff: trivial clean-up
+* [33m213be4f61[m remove BOLT11_HRP_INV_DICT
+* [33mde4c1b65f[m Add suport testnet4
+* [33m1c4bca7dc[m sdist README: document differences between sourceonly and normal tar.gz
+* [33m4ff13f598[m build: appimage: dl xcb-util as debian src pkg instead of upstream git
+* [33maeb0a168b[m qt gui: use QGuiApplication.setApplicationName
+* [33m9a84bb321[m jade: update Jade api to 1.0.31
+* [33m5f43627b7[m gui: qt: tx dialog: add option to copy scriptpubkey of output
+* [33mae4dd7018[m hww: ledger: update udev rules and model ids
+* [33m79c085365[m qml/android: set max screen brightness when displaying QR codes
+* [33m6f7851222[m build: update pinned trezorlib (partial rerun freeze_packages)
+* [33m3d3e6f812[m qt wizard WCWalletName: focus password textedit
+* [33ma19e14bc2[m wallet.get_tx_status: fix incorrect feerate for partial txs
+* [33mf7d0ac27a[m new wizard: set keystore password. fixes #9147
+* [33md20e01b60[m trezor: Fix for trezor library version 0.13.9
+* [33mebfc701b9[m qt gui: clean-up efilter when exiting
+* [33m9d6c81828[m trustedcoin: Wallet_2fa.make_unsigned_transaction to use **kwargs
+* [33mc42cbd057[m trustedcoin: sanitize error messages coming from 2fa server
+* [33m546d570ca[m util.error_text_str_to_safe_str: truncate long errors
+* [33m73d667f98[m trustedcoin: rm dead code
+* [33m178f13954[m mnemonic: make_seed: add sanity-check
+* [33mcb4539c73[m mnemonic: rename seed_type() fn
+* [33md6006b094[m soothe flake8
+* [33m8def0bd6c[m wizard: fix regression: allow passphrase for some '2fa' seeds
+* [33mabea2bb26[m tests: wallet_vertical: re pre-2.7 "2fa" seeds, test both 24 and 25 len
+* [33m7fae4649c[m interface: nicer error for CA-signed "Hostname mismatch" certs
+* [33m9ee998c3b[m maybe_cleanup_forwarding: fix crash if payment_key not in self.received_mpp_htlcs
+* [33m7e2921421[m daemon error-handling: fix traceback.format_exception() on old python
+* [33m559184dc0[m network: (trivial) simplify send_http_on_proxy
+* [33m78050fb99[m lnurl: better error messages
+* [33m0d46e20ed[m typo
+* [33m37d63f501[m update release notes
+* [33mc93928e64[m trustedcoin: fix continuation of 2fa wallet file with keystore-only encryption
+* [33m1c2c016f5[m coldcard: small fixes
+* [33m0bdfcb600[m coldcard: rebase #7682 and fix CC bugs
+* [33ma68d9b848[m qml: styling Pin dialog, fix size glitching
+* [33mf7896ddd3[m qt: new_channel_dialog: unfreeze amount when pressing Min while Max is checked
+* [33m2c624df72[m openalias: only consider TXT records, as DNS can return other records we did not ask for.
+* [33me14148f34[m payment_identifier: regard BIP21 without address and without bolt11 invalid
+* [33m5a8cc85df[m qml: add seed passphrase property to QEWallet, show in WalletDetails
+* [33m4dc64e4cf[m qt: fix scanning multi (privkeys, addresses) from QR.
+* [33me638a832e[m qml: styling HelpDialog
+* [33m608f9db76[m update RELEASE-NOTES
+* [33m363cf001f[m qml: fix handling of channel backup import on lightning-disabled wallets
+* [33mbabf108ee[m qml: "wallet_else_pin" auth should only use the wallet pw if is unified
+* [33mc319a842a[m fix typo
+* [33m6e8426636[m qml: don't unbind/unregister the ActivityResultListener from within the ActivityResultListener handler func.
+* [33mc7988b5c0[m wallet_db: show electrum version in error dialog
+* [33me525168d8[m qml: don't rely on wallet when deactivating PIN and no wallet loaded (fixes #8366)
+* [33m9b7cb0e26[m bip21: trivial follow-up
+* [33m4be192b31[m release.sh: print warning on unexpected arg value
+* [33m7263a4912[m[33m ([m[1;33mtag: 4.5.5[m[33m)[m followup 4159ceee3524024a2dee2322a509cac3c9ebb308
+* [33m1e18e532d[m qt: fix ReceiveWidget layout (fixes #9049)
+* [33mbae2c8d80[m update locale
+* [33mf6702a780[m update block header checkpoints
+* [33m1f652cf3e[m prepare release 4.5.5
+* [33m3fbd8df7d[m bump libsecp256k1 version (0.4.1->0.5.0)
+* [33m7f7a7857b[m Revert "qt: fix ReceiveWidget layout (fixes #9049)"
+* [33m21ffe3215[m qt: fix ReceiveWidget layout (fixes #9049)
+* [33m8e240f4de[m bip21: add testcases for amount bounds
+* [33mbac49910e[m bip21: consider amount=0 in bip21 uri invalid
+* [33mfec11d141[m qt wizard: fix offline 2fa wallet creation in some cases
+* [33m632859866[m qml wizard: even stricter validation for new wallet name
+* [33mbfe40605f[m qt main window: rm dead code
+* [33mf546ef5a7[m fix plot.py
+* [33m472a65eba[m qml: NetworkOverview: show server height when syncing headers
+* [33m36d49f4ad[m interface: also trigger 'blockchain_updated' during initial sync
+* [33mfb64c5b6c[m crypto: add some notes re considerations
+* [33ma1f724149[m slip39: implement extendable backups
+* [33ma4bdc90a6[m ecc: "public key could not be parsed" exception to contain pubkey bytes
+* [33mb9cd61bcd[m fix apparmor issue (#9047)
+* [33mba59a03b8[m qml: log error if not able to retrieve private key for address
+* [33m1047200a9[m wizard: fix wrong icon and icon disappearing when resuming unfinished wallet
+* [33mb80630df9[m qml: expose LIGHTNING_PAYMENT_BUDGET_FEE_MAX_MILLIONTHS in preferences
+* [33m2152347ba[m qt settings: expose LIGHTNING_PAYMENT_BUDGET_FEE_MAX_MILLIONTHS
+* [33mc82918a45[m lnworker: move around some logging re PaySession, also log budget
+* [33m24426fd54[m lnworker: make PaymentFeeBudget defaults configurable
+* [33md2a0252b2[m trampoline: rm hardcoded TRAMPOLINE_FEES. just use exponential search
+* [33m14311318d[m submarine_swaps: move http calls to method
+* [33m6793efd0a[m scripts: rm bip70.py
+* [33mffc761be4[m constants: add some more type hints
+* [33me783206ec[m network: re-detect is_proxy_tor every time we connect to a server
+* [33mc9ed717be[m dependencies: remove bitstring
+* [33me35b715ed[m qml: qeinvoice: fix regression in update_userinfo
+* [33m05cdc4d6f[m qml: lightning invoice status can be one of onchain invoice states when using fallback address. (fixes #9018)
+* [33m06a52d8ac[m qt: normalize wallet path before lookup in window list
+* [33m815a5272f[m AppArmor Profiles for Electrum
+* [33mbd32ebecb[m test_lnpeer: fix node_id in storage of created peers
+* [33m622bc801b[m follow-up prev
+* [33ma2fb70d60[m exchange_rate: historical rates: merge old+new data, don't overwrite
+* [33md09131e91[m lnworker: add_peer: no DNS lookup if a proxy is set, to avoid a DNS-leak
+* [33m70177e4b2[m lnworker: don't query DNS for .onion hosts (fixes #9002)
+* [33ma8620bd3c[m jade: update Jade api to 1.0.29
+* [33m493becfff[m ci: regtests: build own libsecp256k1 instead of using apt
+* [33m3d588fada[m requirements: bump pinned (and max) aiorpcx versions to 0.23.1
+* [33m7d707bb5c[m payment_identifier: don't assume bip70_data exists in has_expired()
+* [33m8bd490916[m qt: focus reason can't be None (fixes #8962)
+* [33m70acb8904[m save notes whenever modified, using 10s rate limiter. fixes #8951
+* [33mf755b690d[m Call pairing dialog when necessary, fixes #8970
+* [33m8ca1bdedc[m Change copyright email address to soren@debian.org.
+* [33m70106b6f2[m Add license information to AppStream metainfo.xml.
+* [33mdcc1da049[m Update AppStream metainfo.xml.
+* [33m0d525679f[m qml: QETxDetails: defer to wallet.get_tx_info() for rbf/cpfp
+* [33m1b3b6c7f7[m contrib/osx: - rename make_osx2.sh -> sign_osx.sh - add command to unlock keychain - chmod +x
+* [33m0a94ea0bc[m build: split make_osx.sh script into two: "build" and "sign" parts
+* [33m39afa2c3e[m qml: add tx options to ConfirmTxDialog, RbfBumpFeeDialog
+* [33m357ac6be9[m interface: also log cancellations in send_request
+*   [33m99f6dd5d5[m[33m ([m[1;33mtag: 4.5.4[m[33m)[m Merge pull request #8943 from SomberNight/202403_release_notes_454
+[32m|[m[33m\[m  
+[32m|[m * [33m85ffbfc83[m prepare release 4.5.4
+* [33m|[m   [33m80586d2ce[m Merge pull request #8944 from SomberNight/202403_swap_messages
+[34m|[m[35m\[m [33m\[m  
+[34m|[m * [33m|[m [33m01155ac6f[m swaps: homogenise gui messages
+[34m|[m [33m|[m[33m/[m  
+* [33m|[m   [33m745f9184e[m Merge pull request #8942 from SomberNight/202403_get_swap_by_funding_tx
+[33m|[m[1;31m\[m [33m\[m  
+[33m|[m [1;31m|[m[33m/[m  
+[33m|[m[33m/[m[1;31m|[m   
+[33m|[m * [33m05599eeda[m swaps: fix get_swap_by_funding_tx, and types/type-hints
+* [1;31m|[m [33m4a7103231[m swaps: expand docstring for reverse_swap
+[1;31m|[m[1;31m/[m  
+* [33m58a1bdfec[m lnworker.check_mpp_status: add docstring
+* [33maf6a1f3d0[m swaps: use longer final_cltv_delta for client-normal-swap
+*   [33mff5048752[m Merge pull request #8933 from st3b1t/master
+[1;32m|[m[1;33m\[m  
+[1;32m|[m * [33m9ad6688ce[m trt removed
+[1;32m|[m[1;32m/[m  
+*   [33m8b2a59619[m Merge pull request #8925 from SomberNight/202403_simplify_chan_dict
+[1;34m|[m[1;35m\[m  
+[1;34m|[m * [33m30c9f5b6b[m walletdb: chan dict: small clean-up (incl db upgrade)
+* [1;35m|[m [33mf6312366e[m swapserver: raise exception if client uses deprecated API
+[1;35m|[m[1;35m/[m  
+* [33m0faadc046[m lnpeer: fix some type hints
+* [33mc6802adba[m qt wizard: set focus on next_button
+*   [33m33b194620[m Merge pull request #8924 from spesmilo/fix_swapserver_trampoline
+[1;36m|[m[31m\[m  
+[1;36m|[m * [33mfde5f5b9b[m lnpeer: fix #8825
+[1;36m|[m * [33m94a8754bd[m regtest: test swapserver with trampoline onions
+[1;36m|[m[1;36m/[m  
+*   [33md12049266[m Merge pull request #8921 from levantah/levantah/del_bublina
+[32m|[m[33m\[m  
+[32m|[m * [33m2dcffd1ef[m Remove bublina Signet
+* [33m|[m [33mb11d0062e[m wizard: log state when view not defined. ref #8815
+* [33m|[m [33md6ea2f1e3[m wizard: log state when view not defined. ref #8916
+* [33m|[m [33md6ef53dfa[m qt: fix some strings for localization
+[33m|[m[33m/[m  
+* [33m51b7fc04e[m walletdb: fix convert_version_58 for partial local txs
+* [33m8b26d310a[m android readme: update outdated "debug vs release build" section
+* [33m777c2ffb2[m create a trampoline onion when directly paying a trampoline node
+* [33m85ea2dfc4[m trezor: add_slip_19_ownership_proofs_to_tx to not skip complete inputs
+* [33md0c37c6e3[m qml: refactor help text in CpfpBumpFeeDialog, move most to help text popup
+* [33mb0227c7e0[m qml: add HelpDialog and HelpButton for showing additional info
+* [33m5e472117d[m gui: more hardcoded bytes vs vbytes strings
+* [33md01582d58[m[33m ([m[1;33mtag: 4.5.3[m[33m)[m fix tests (follow-up)
+* [33m70b9ea263[m prepare release 4.5.3
+* [33m197979063[m lnworker: log gossip_db status in pay_invoice
+* [33mb4712397c[m logging: (trivial) use repr() of seed_type
+* [33m4be90eb15[m update block header checkpoints
+* [33m2975d34c9[m update locale
+* [33mb84a7508a[m android: p4a ref https://github.com/accumulator/python-for-android/commit/0c507ead85cc603d0e4a2f5e58e9247a1fae262d
+* [33m7ff3a0fef[m submarine swaps: fail htlc with INCORRECT_OR_UNKNOWN_PAYMENT_DETAILS
+* [33m32775c1b5[m regtest: fix varname in wait_until_htlcs_settled
+*   [33m7da3613b1[m Merge pull request #8906 from accumulator/old_2fa_passphrase
+[34m|[m[35m\[m  
+[34m|[m * [33m8ce1e6453[m wizard: skip/hide passphrase option for 'old' and '2fa' seeds (see #4326)
+* [35m|[m [33m564036e71[m build: partial rerun freeze_packages
+* [35m|[m [33m2ca180dde[m bump libsecp256k1 version
+* [35m|[m   [33md52e36e29[m Merge pull request #8846 from SomberNight/202401_gui_text_vendor_pyperclip
+[36m|[m[1;31m\[m [35m\[m  
+[36m|[m * [35m|[m [33m06db7d74f[m dependencies: vendor "pyperclip" pkg, used by text gui
+* [1;31m|[m [35m|[m [33md7b026053[m requirements: bump min aiohttp-socks to 0.8.4
+* [1;31m|[m [35m|[m [33md18496c56[m license: add copyright headers
+* [1;31m|[m [35m|[m [33m8ab3dcce5[m keystore: API changes for from_seed/from_bip43_rootseed/bip39_to_seed
+* [1;31m|[m [35m|[m [33m96f28607f[m keystore: "old"-type seeds cannot have a passphrase
+[35m|[m [1;31m|[m[35m/[m  
+[35m|[m[35m/[m[1;31m|[m   
+* [1;31m|[m [33mda1727b2f[m trustedcoin: validate numeric format of OTP user entry (fixes #8905)
+* [1;31m|[m   [33m979960377[m Merge pull request #8888 from SomberNight/202402_jsonrpc_errors
+[1;32m|[m[1;33m\[m [1;31m\[m  
+[1;32m|[m * [1;31m|[m [33mbd492fbd1[m cli/rpc: nicer error messages and error-passing
+* [1;33m|[m [1;31m|[m   [33me2db5ca2e[m Merge pull request #8871 from SomberNight/202402_slip19_trezor
+[1;34m|[m[1;35m\[m [1;33m\[m [1;31m\[m  
+[1;34m|[m * [1;33m|[m [1;31m|[m [33ma749fd778[m qt tx_dialog: share btn: add option to add slip-19 ownership proofs
+[1;34m|[m * [1;33m|[m [1;31m|[m [33mb7ed016f3[m qt tx_dialog: share btn: replace nested menus with checkboxes
+[1;34m|[m * [1;33m|[m [1;31m|[m [33m0925f1528[m wallet/keystore: add apis for "add_slip_19_ownership_proofs_to_tx"
+* [1;35m|[m [1;33m|[m [1;31m|[m [33mdc3ff908b[m followup prev
+* [1;35m|[m [1;33m|[m [1;31m|[m [33md12ce0041[m followup prev
+* [1;35m|[m [1;33m|[m [1;31m|[m [33m6d2dfc975[m android: limit size of text pasted from clipboard, to avoid TransactionTooLargeException
+* [1;35m|[m [1;33m|[m [1;31m|[m [33mde9c0249c[m qml: icons, styling
+* [1;35m|[m [1;33m|[m [1;31m|[m [33m27bb28e35[m tests: follow-up move of folder
+* [1;35m|[m [1;33m|[m [1;31m|[m [33m6ecbb8eb3[m tests: add test for payment_identifier.invoice_from_payment_identifier()
+* [1;35m|[m [1;33m|[m [1;31m|[m   [33md968c6245[m Merge pull request #8897 from accumulator/move_tests_to_root
+[1;36m|[m[31m\[m [1;35m\[m [1;33m\[m [1;31m\[m  
+[1;36m|[m * [1;35m|[m [1;33m|[m [1;31m|[m [33m4c6421e16[m tests: fix CI regtest new path
+[1;36m|[m * [1;35m|[m [1;33m|[m [1;31m|[m [33m0faf6928c[m tests: explicit sync on self.app instance ready and make sure _testcase_event is cleared before QMetaObject.invokeMethod as that can race if it gets inadvertently executed synchronously.
+[1;36m|[m * [1;35m|[m [1;33m|[m [1;31m|[m [33m73fee69f5[m tests: move /electrum/tests to /tests
+* [31m|[m [1;35m|[m [1;33m|[m [1;31m|[m [33m2b95223e2[m qml: handle invoice removed from backend from qeinvoicelistmodel status update timer (fixes #8898)
+* [31m|[m [1;35m|[m [1;33m|[m [1;31m|[m [33mef87fbd3e[m payment_identifier: return onchain invoice when GUI requests MAX amount (fixes #8900)
+[31m|[m[31m/[m [1;35m/[m [1;33m/[m [1;31m/[m  
+* [1;35m|[m [1;33m|[m [1;31m|[m   [33me11d7b37f[m Merge pull request #8865 from SomberNight/202402_server_bookmarks
+[32m|[m[33m\[m [1;35m\[m [1;33m\[m [1;31m\[m  
+[32m|[m * [1;35m|[m [1;33m|[m [1;31m|[m [33m9c6d7617d[m qt NetworkDialog: sort bookmarked servers to top
+[32m|[m * [1;35m|[m [1;33m|[m [1;31m|[m [33me5d28563c[m network: implement basic "add server as bookmark" functionality
+* [33m|[m [1;35m|[m [1;33m|[m [1;31m|[m   [33m1b75e3883[m Merge pull request #8845 from accumulator/feepicker
+[34m|[m[35m\[m [33m\[m [1;35m\[m [1;33m\[m [1;31m\[m  
+[34m|[m * [33m|[m [1;35m|[m [1;33m|[m [1;31m|[m [33m016e50099[m qml: FeePicker parameterize enable display of tx info and picker, use this for CPFP to put picker in Total section
+[34m|[m * [33m|[m [1;35m|[m [1;33m|[m [1;31m|[m [33mc0b892720[m qml: consolidate fee slider ui in various places to a single FeePicker control
+* [35m|[m [33m|[m [1;35m|[m [1;33m|[m [1;31m|[m [33m57270e3bf[m tests: qt_util: disable timer in qt testcases
+* [35m|[m [33m|[m [1;35m|[m [1;33m|[m [1;31m|[m [33md8654361a[m peer_wire.csv: remove msgtype gossip_queries options, as the extract-formats.py tool does not generate these anymore since https://github.com/lightning/bolts/commit/aad959a297ff66946effb165518143be15777dd6
+* [35m|[m [33m|[m [1;35m|[m [1;33m|[m [1;31m|[m [33mea4481a8d[m android readme: de-dupe "qml_gui" requirements
+* [35m|[m [33m|[m [1;35m|[m [1;33m|[m [1;31m|[m   [33m5582b753e[m Merge pull request #8881 from accumulator/qobject_test
+[36m|[m[1;31m\[m [35m\[m [33m\[m [1;35m\[m [1;33m\[m [1;31m\[m  
+[36m|[m * [35m|[m [33m|[m [1;35m|[m [1;33m|[m [1;31m|[m [33ma626d1bf4[m tests: add test for QEAmount(from_invoice=..) and (m)satsStr properties
+[36m|[m * [35m|[m [33m|[m [1;35m|[m [1;33m|[m [1;31m|[m [33m3582c7916[m stub QVideoSink import as it requires many dependencies but isn't used on android currently
+[36m|[m * [35m|[m [33m|[m [1;35m|[m [1;33m|[m [1;31m|[m [33m71dbf76cd[m add new 'qml_gui' extra to setup.py and include it for tox
+[36m|[m * [35m|[m [33m|[m [1;35m|[m [1;33m|[m [1;31m|[m [33m46e0c6e8a[m tests: print traceback of original exception when testcase fails
+[36m|[m * [35m|[m [33m|[m [1;35m|[m [1;33m|[m [1;31m|[m [33m08a06ae4a[m don't prefix utility classes and functions file with test_
+[36m|[m * [35m|[m [33m|[m [1;35m|[m [1;33m|[m [1;31m|[m [33m058305acc[m add a simple test framework for testing QObjects and their signal/slot mechanism
+* [1;31m|[m [35m|[m [33m|[m [1;35m|[m [1;33m|[m [1;31m|[m   [33m1d0706abd[m Merge pull request #8778 from SomberNight/202312_ci_py312
+[1;32m|[m[1;33m\[m [1;31m\[m [35m\[m [33m\[m [1;35m\[m [1;33m\[m [1;31m\[m  
+[1;32m|[m * [1;31m|[m [35m|[m [33m|[m [1;35m|[m [1;33m|[m [1;31m|[m [33m9a6ec6164[m ci: also run unit tests with python 3.12
+[1;32m|[m[1;32m/[m [1;31m/[m [35m/[m [33m/[m [1;35m/[m [1;33m/[m [1;31m/[m  
+* [1;31m|[m [35m|[m [33m|[m [1;35m|[m [1;33m|[m [1;31m|[m [33m79d88dcb5[m lnpeer: fix timing issue in reest_chan, for replaying unacked updates
+* [1;31m|[m [35m|[m [33m|[m [1;35m|[m [1;33m|[m [1;31m|[m   [33m697968bcb[m Merge pull request #7835 from SomberNight/202205_lnpeer_async_process_message
+[1;34m|[m[1;35m\[m [1;31m\[m [35m\[m [33m\[m [1;35m\[m [1;33m\[m [1;31m\[m  
+[1;34m|[m * [1;31m|[m [35m|[m [33m|[m [1;35m|[m [1;33m|[m [1;31m|[m [33m45e08ada6[m lnpeer: make process_message async
+[1;34m|[m[1;34m/[m [1;31m/[m [35m/[m [33m/[m [1;35m/[m [1;33m/[m [1;31m/[m  
+* [1;31m|[m [35m|[m [33m|[m [1;35m|[m [1;33m|[m [1;31m|[m [33m643fbecc1[m wizard: fix co-signing hardware wallets data incorrectly referenced
+* [1;31m|[m [35m|[m [33m|[m [1;35m|[m [1;33m|[m [1;31m|[m [33m6172898a0[m trezor: minor things for better model "safe 3" support
+* [1;31m|[m [35m|[m [33m|[m [1;35m|[m [1;33m|[m [1;31m|[m [33mfffbc178c[m qt wizard: hww dialogs: log some exceptions more aggressively
+* [1;31m|[m [35m|[m [33m|[m [1;35m|[m [1;33m|[m [1;31m|[m [33m130baf13c[m trezor: show descriptive error if trying to init device without fw
+* [1;31m|[m [35m|[m [33m|[m [1;35m|[m [1;33m|[m [1;31m|[m [33m46ce5d0f3[m wizard: (trivial) follow-up prev
+* [1;31m|[m [35m|[m [33m|[m [1;35m|[m [1;33m|[m [1;31m|[m [33m638fdf114[m wizard: don't log sensitive values: replace blacklist with whitelist
+* [1;31m|[m [35m|[m [33m|[m [1;35m|[m [1;33m|[m [1;31m|[m [33m7cf22d4b9[m coldcard: wallet info dlg: fix missing "Export for Coldcard" btn
+* [1;31m|[m [35m|[m [33m|[m [1;35m|[m [1;33m|[m [1;31m|[m [33m66af6e623[m send_tab: set tab changes focus for multiline edit ref #8889
+* [1;31m|[m [35m|[m [33m|[m [1;35m|[m [1;33m|[m [1;31m|[m [33mb3bce0299[m send_tab: fix tab order #8889
+[1;33m|[m [1;31m|[m[1;33m_[m[35m|[m[1;33m_[m[33m|[m[1;33m_[m[1;35m|[m[1;33m/[m [1;31m/[m  
+[1;33m|[m[1;33m/[m[1;31m|[m [35m|[m [33m|[m [1;35m|[m [1;31m|[m   
+* [1;31m|[m [35m|[m [33m|[m [1;35m|[m [1;31m|[m [33mb3a908f64[m WalletDB: (trivial) add type hint
+* [1;31m|[m [35m|[m [33m|[m [1;35m|[m [1;31m|[m [33mb6e5fe8db[m lnworker: history to include close tx for channel backups
+* [1;31m|[m [35m|[m [33m|[m [1;35m|[m [1;31m|[m [33ma083b9502[m util.CallbackManager: handle callbacks being cancelled
+[1;31m|[m[1;31m/[m [35m/[m [33m/[m [1;35m/[m [1;31m/[m  
+* [35m|[m [33m|[m [1;35m|[m [1;31m|[m [33mafb245c17[m scripts: fix regression in quick_start.py
+* [35m|[m [33m|[m [1;35m|[m [1;31m|[m [33m7725e88e3[m tests: payment_identifier: check multiline output amounts
+* [35m|[m [33m|[m [1;35m|[m [1;31m|[m [33m6dd1cf0db[m tests: payment_identifier: remove redundant, add some less common domain names
+* [35m|[m [33m|[m [1;35m|[m [1;31m|[m [33mfa46b4633[m tests: payment_identifier: check multiline outputs exist, are correct number and type
+* [35m|[m [33m|[m [1;35m|[m [1;31m|[m [33m499b8ed37[m tests: payment_identifier: add some more whitespace situations, fix script spk
+* [35m|[m [33m|[m [1;35m|[m [1;31m|[m [33m73be52203[m tests: add tests for all supported payment identifier types.
+* [35m|[m [33m|[m [1;35m|[m [1;31m|[m [33m2dd4195ad[m qt: ChoiceWidget fix init selected_key
+* [35m|[m [33m|[m [1;35m|[m [1;31m|[m [33m6738e1e90[m p4a: python-for-android ref 4f1a1a3a41f6bf8d28984bfd1ec8af3c5d8eb362
+* [35m|[m [33m|[m [1;35m|[m [1;31m|[m [33m1736558e3[m type hints: follow-up prevprev. "union types as X | Y" needs py3.10
+* [35m|[m [33m|[m [1;35m|[m [1;31m|[m [33md2ace95f9[m tests: add toy test for payment_identifier.py
+* [35m|[m [33m|[m [1;35m|[m [1;31m|[m [33mf811db4ec[m payment_identifier: imports, typing declarations
+* [35m|[m [33m|[m [1;35m|[m [1;31m|[m [33m19d9467b9[m qml: add typing declarations to qechanneldetails
+* [35m|[m [33m|[m [1;35m|[m [1;31m|[m   [33macc7b44a3[m Merge pull request #8873 from accumulator/issue_8355
+[1;36m|[m[31m\[m [35m\[m [33m\[m [1;35m\[m [1;31m\[m  
+[1;36m|[m * [35m|[m [33m|[m [1;35m|[m [1;31m|[m [33mc755a5866[m qedaemon: remove redundant, small code style fixes
+[1;36m|[m * [35m|[m [33m|[m [1;35m|[m [1;31m|[m [33m5aa782a19[m qml: extend self._loading guard to encompass _on_backend_wallet_loaded slot as well
+[1;36m|[m * [35m|[m [33m|[m [1;35m|[m [1;31m|[m [33mb361d0246[m qml: tighten self._loading guard to encompass whole loadWallet fn, not just task thread.
+* [31m|[m [35m|[m [33m|[m [1;35m|[m [1;31m|[m [33m2882c4be4[m qt: consistency HWW wizard page translations
+* [31m|[m [35m|[m [33m|[m [1;35m|[m [1;31m|[m [33m39bc672da[m followup prev
+* [31m|[m [35m|[m [33m|[m [1;35m|[m [1;31m|[m [33mcac9c4bbb[m qt: fix various issues on send_tab, fixes #8874
+* [31m|[m [35m|[m [33m|[m [1;35m|[m [1;31m|[m [33mff8f8d610[m qt: sweep_key_dialog: make UI a bit more intuitive
+* [31m|[m [35m|[m [33m|[m [1;35m|[m [1;31m|[m [33m482ec89b5[m minor, code style, imports
+* [31m|[m [35m|[m [33m|[m [1;35m|[m [1;31m|[m [33m422891160[m qml: close TxDetails on TX remove only after the 'removed_transaction' event has been received, so the history model doesn't refresh too early (fixes #8782)
+* [31m|[m [35m|[m [33m|[m [1;35m|[m [1;31m|[m   [33m620b46780[m Merge pull request #8870 from accumulator/wizard_component_race
+[31m|[m[33m\[m [31m\[m [35m\[m [33m\[m [1;35m\[m [1;31m\[m  
+[31m|[m [33m|[m[31m/[m [35m/[m [33m/[m [1;35m/[m [1;31m/[m  
+[31m|[m[31m/[m[33m|[m [35m|[m [33m|[m [1;35m|[m [1;31m|[m   
+[31m|[m * [35m|[m [33m|[m [1;35m|[m [1;31m|[m [33mc78a90a24[m qt: wizard: move page.on_ready() to just after construction to avoid triggering signal/slots that might assume on_ready() has run
+[31m|[m [1;35m|[m [35m|[m[1;35m_[m[33m|[m[1;35m/[m [1;31m/[m  
+[31m|[m [1;35m|[m[1;35m/[m[35m|[m [33m|[m [1;31m|[m   
+* [1;35m|[m [35m|[m [33m|[m [1;31m|[m   [33ma668d7850[m Merge pull request #8864 from SomberNight/202402_gui_feerate_vbyte
+[34m|[m[35m\[m [1;35m\[m [35m\[m [33m\[m [1;31m\[m  
+[34m|[m * [1;35m|[m [35m|[m [33m|[m [1;31m|[m [33m0b7e52fbb[m gui: label tx sizes as "vbytes" and feerates as "sat/vbyte"
+* [35m|[m [1;35m|[m [35m|[m [33m|[m [1;31m|[m [33m0a2a22b82[m qt: use selected_key instead of selected_item[0] for ChoiceWidgets
+[1;35m|[m [35m|[m[1;35m/[m [35m/[m [33m/[m [1;31m/[m  
+[1;35m|[m[1;35m/[m[35m|[m [35m|[m [33m|[m [1;31m|[m   
+* [35m|[m [35m|[m [33m|[m [1;31m|[m [33mc84e55e95[m wallet: (trivial) simplify class hierarchy
+* [35m|[m [35m|[m [33m|[m [1;31m|[m [33m0a6b2d521[m qml: move final wizard submit() to WizardComponent.finish handler
+* [35m|[m [35m|[m [33m|[m [1;31m|[m   [33m019baa5a7[m Merge pull request #8862 from SomberNight/202401_qml_wizard_final_accept
+[35m|[m[1;31m\[m [35m\[m [35m\[m [33m\[m [1;31m\[m  
+[35m|[m [1;31m|[m[35m_[m[35m|[m[35m/[m [33m/[m [1;31m/[m  
+[35m|[m[35m/[m[1;31m|[m [35m|[m [33m|[m [1;31m|[m   
+[35m|[m * [35m|[m [33m|[m [1;31m|[m [33m48a96f677[m qml wizard: run navmap[view]['accept'] handler a final time on finish
+* [1;31m|[m [35m|[m [33m|[m [1;31m|[m [33m87214c004[m trezor: don't try to sign non-ismine inputs
+* [1;31m|[m [35m|[m [33m|[m [1;31m|[m [33m07dc80dd9[m qml wizard: stricter validation for new wallet name
+* [1;31m|[m [35m|[m [33m|[m [1;31m|[m [33m1d4e2ebed[m ConfigVar: add "converter" for getter, add use it for "proxy" key
+* [1;31m|[m [35m|[m [33m|[m [1;31m|[m [33m3e81cd1f1[m trezor: fix regression in sign_transaction for trezor one for multisig
+[33m|[m [1;31m|[m[33m_[m[35m|[m[33m/[m [1;31m/[m  
+[33m|[m[33m/[m[1;31m|[m [35m|[m [1;31m|[m   
+* [1;31m|[m [35m|[m [1;31m|[m [33mca206de16[m qt NetworkDialog: small clean-up
+* [1;31m|[m [35m|[m [1;31m|[m [33mb80f97589[m config: rm some dead code
+[35m|[m [1;31m|[m[35m/[m [1;31m/[m  
+[35m|[m[35m/[m[1;31m|[m [1;31m|[m   
+* [1;31m|[m [1;31m|[m [33ma9a8ed2eb[m follow-up: factor out more hardcoded "sat/byte" and "sat/b" strings
+* [1;31m|[m [1;31m|[m [33m13a421aab[m factor out hardcoded "sat/byte" and "sat/b" strings
+* [1;31m|[m [1;31m|[m [33m16eec8daf[m qml QEChannelDetails: show currentFeerate
+* [1;31m|[m [1;31m|[m [33md7a9e2d02[m qml QEChannelDetails: add some type hints
+* [1;31m|[m [1;31m|[m   [33m061c82112[m Merge pull request #8843 from SomberNight/202401_jsondb_set
+[1;31m|[m[1;33m\[m [1;31m\[m [1;31m\[m  
+[1;31m|[m [1;33m|[m[1;31m/[m [1;31m/[m  
+[1;31m|[m[1;31m/[m[1;33m|[m [1;31m|[m   
+[1;31m|[m * [1;31m|[m [33m173404229[m jsondb: raise when trying to store sets in the db
+[1;31m|[m * [1;31m|[m [33m79aba5364[m walletdb: change structure of prevouts_by_scripthash, and db upgrade
+[1;31m|[m * [1;31m|[m [33m4b28bfc32[m tests: walletdb: add failing test case for persistence with jsonpatch
+* [1;33m|[m [1;31m|[m [33macae6751d[m wizard: do not log sensitive data (add more keys, again)
+* [1;33m|[m [1;31m|[m [33mcb55c6567[m qml wizard: WCWalletPassword: show warning if pw is too short
+* [1;33m|[m [1;31m|[m [33mcc19a8626[m lnutil: nicer repr for some attrs data classes
+* [1;33m|[m [1;31m|[m [33me6a0455ce[m lnpeer: raise chan fees using update_fee more aggressively
+* [1;33m|[m [1;31m|[m [33me7ebf5d95[m qt wizard: handle some cases of hw device being unplugged during flow
+* [1;33m|[m [1;31m|[m [33m67b57da40[m qml: WCHaveMasterKey: (fix) re-verify text in onTextChanged
+[1;31m|[m [1;33m|[m[1;31m/[m  
+[1;31m|[m[1;31m/[m[1;33m|[m   
+* [1;33m|[m [33m522e9485c[m text gui: rm some magic numbers (ascii key codes), and small clean-up
+* [1;33m|[m [33mbd7adc83b[m exchange_rate: don't show ridiculous precision for alts
+* [1;33m|[m [33mcbece7189[m walletdb: rm some dead code
+[1;33m|[m[1;33m/[m  
+* [33mbb226e653[m tests: simplify TestWalletStorage.imported_add_privkeys_persistence
+* [33mcd3be429e[m qt: PayToEdit: always use monospace font
+* [33m28042c61c[m qml: trustedcoin: remove redundant slot parameter in createKeystore
+* [33m50a53aaed[m qml: handle 2fa wallet can have None for billing_info
+* [33mdef1abfca[m tests: test_mnemonic: extend test_random_seeds
+* [33mad95f8ad5[m mnemonic: add comments
+* [33m7007a0c1c[m mnemonic: add type hints
+* [33mfe03fbf2a[m[33m ([m[1;33mtag: 4.5.2[m[33m)[m prepare release 4.5.2
+* [33m7247130aa[m adb: get_balance: add comment about #8835
+* [33m43a5d0342[m qt: coins tab: also define sort order for coins mined in same block
+* [33m9518bd0e6[m qt: replace timer based delayed call with a less confusing event loop queued call
+* [33m17147732f[m qt: fix macOS workaround introducing race
+* [33m9fd16cd67[m follow-up prev
+* [33m0f55a1e30[m qt: coins tab: properly sort unconfirmed/local utxos to top
+* [33mf98e98634[m[33m ([m[1;33mtag: 4.5.1[m[33m)[m prepare release 4.5.1
+* [33m77f6c932a[m release notes for 4.5.1: small clarification
+*   [33m1b65c301b[m Merge pull request #8828 from spesmilo/release_notes_4_5_1
+[1;34m|[m[1;35m\[m  
+[1;34m|[m * [33m060b30cf7[m add release notes for 4.5.1
+* [1;35m|[m [33m1f5004320[m qt: re-add processEvents() calls for abstract wizard. might work around #8809/#8815
+* [1;35m|[m [33m2390a76d1[m update locale
+* [1;35m|[m [33mb563c9dd0[m submarine swaps: do not set attempts parameter in pay_invoice
+* [1;35m|[m   [33m3b841a8dc[m Merge pull request #8761 from accumulator/minsdk_23
+[1;36m|[m[31m\[m [1;35m\[m  
+[1;36m|[m * [1;35m|[m [33m438257823[m qml: android.minapi and android.ndk_api to 23 (android 6.0+)
+* [31m|[m [1;35m|[m [33m55a2005a6[m qml: update history view after address/key delete. fixes #8782
+[1;35m|[m [31m|[m[1;35m/[m  
+[1;35m|[m[1;35m/[m[31m|[m   
+* [31m|[m [33mef9ba0985[m wallet: (trivial) add asserts re args in bump_fee and friends
+* [31m|[m [33mc178be74b[m storage: replace assert in append() with named exception
+* [31m|[m [33m49c3567d7[m wallet: simplify bump_fee: rm txid arg
+* [31m|[m [33mde2007e90[m adb: simplify get_conflicting_transactions
+* [31m|[m [33m76e547a08[m followup: call super().__init__() for WalletFileException descendants
+* [31m|[m [33m4a8207244[m qt: new_channel_dialog: init USE_RECOVERABLE_CHANNELS cb intuitively
+* [31m|[m [33me2bb7df54[m qml: invert, more strict check in determine_can_pay for invoice types, also disable paste button while PI is being evaluated
+* [31m|[m [33m4469e9989[m qml: LNURLp has no bolt11 to query until later. fixes #8822
+* [31m|[m [33mbbd3bd2ff[m wallet.is_lightning_funding_tx: also check channel_backups
+* [31m|[m   [33m0470d345e[m Merge pull request #8818 from SomberNight/202401_ci_cron
+[32m|[m[33m\[m [31m\[m  
+[32m|[m * [31m|[m [33md63253b30[m ci: only run build tasks once per day (or on manual trigger)
+* [33m|[m [31m|[m [33m248e50eed[m transaction: rename tx.is_final to tx.is_rbf_enabled, and invert it
+* [33m|[m [31m|[m [33mf30d81a98[m swapserver plugin: fix doc
+* [33m|[m [31m|[m   [33m52c4acb48[m Merge pull request #8814 from SomberNight/202401_lnpeer_chan_reest
+[33m|[m[35m\[m [33m\[m [31m\[m  
+[33m|[m [35m|[m[33m/[m [31m/[m  
+[33m|[m[33m/[m[35m|[m [31m|[m   
+[33m|[m * [31m|[m [33m2696e357c[m lnpeer: add comment to on_channel_reestablish re blocking
+[33m|[m * [31m|[m [33mf808ec911[m lnpeer.reest_chan: allow state transition WE_ARE_TOXIC->WE_ARE_TOXIC
+[33m|[m * [31m|[m [33mdf58dd1f2[m lnchannel.get_close_opts: allow REQUEST_REMOTE_FCLOSE if WE_ARE_TOXIC
+[33m|[m * [31m|[m [33m140d2d024[m lnpeer: fix timing issues in reestablish_channel, for dataloss case
+* [35m|[m [31m|[m [33m0e5a1380c[m i18n: simplify language default. only translate string if using GUI.
+* [35m|[m [31m|[m [33m83c47439c[m fix tests
+* [35m|[m [31m|[m [33m6a28ef5db[m qt: add ElectrumWindow.set_payment_identifier delegate
+* [35m|[m [31m|[m [33m7de45c132[m ci: pin flake8 version
+* [35m|[m [31m|[m [33md8f579ccf[m Consistently use translated strings for UserFacingException raises
+* [35m|[m [31m|[m [33m291f0ce23[m qml: handle exception more gracefully when attempting to delete last address from imported wallet
+* [35m|[m [31m|[m [33m4a4497b5e[m qt: wizard: styling, add icons to success/error messages
+* [35m|[m [31m|[m [33m3d9996ab8[m trustedcoin: disable OTP entry after successful validation
+* [35m|[m [31m|[m [33m82c21bc30[m wizard: take hardware_device from correct location for cosigners. fixes #8808
+* [35m|[m [31m|[m [33m2b3d7096c[m qt: add typing to ResizableStackedWidget, add index validation to setCurrentIndex, return None for currentWidget() if current_index == -1
+* [35m|[m [31m|[m [33md19dd817d[m followup dab768b9320343343d53f1a978b5d31101910274
+* [35m|[m [31m|[m [33md4f31929a[m qt chan details dlg: add onchain feerate, to_self_delay
+[35m|[m[35m/[m [31m/[m  
+* [31m|[m [33m95c55c542[m lnworker.suggest_splits: (fix) don't force splitting
+* [31m|[m [33m129917c46[m lnworker: fix current_feerate_per_kw for regtest
+* [31m|[m [33mec81f0089[m trustedcoin: cannot reset OTP when seed is not available (online wallet creation continuation)
+* [31m|[m [33m57bd29149[m call super().__init__() for WalletFileException descendants, qt: handle unfinished wallets when opened via File>Open (ref #8809)
+* [31m|[m [33md660c5780[m qt BalanceToolButton: rm hardcoded min size
+* [31m|[m [33m66b24411e[m qt BalanceToolButton: better sizing on high DPI screens
+* [31m|[m [33m10be63103[m qml: tx.txid() can be None in qetxfinalizer. fixes (#8807)
+* [31m|[m [33mde76eb94d[m android: allow override of FRESH_CLONE target directory
+* [31m|[m [33ma8dc27ef4[m android: buildozer ref 4403ecf445f10b5fbf7c74f4621bf2b922ad35b5
+* [31m|[m [33mfff6995de[m[33m ([m[1;33mtag: 4.5.0[m[33m)[m prepare release 4.5.0
+* [31m|[m   [33m5ea40b4ea[m Merge pull request #8805 from SomberNight/202401_bump_zbar
+[36m|[m[1;31m\[m [31m\[m  
+[36m|[m * [31m|[m [33m11764f9a7[m android build: make apt less quiet, for more feedback about progress
+[36m|[m * [31m|[m [33m5369be66d[m appimage build: build zbar ourselves
+[36m|[m * [31m|[m [33m0a6283b1e[m build: bump zbar version in win/mac/android builds
+* [1;31m|[m [31m|[m   [33m14ec36dba[m Merge pull request #8741 from accumulator/labels_update
+[1;31m|[m[1;33m\[m [1;31m\[m [31m\[m  
+[1;31m|[m [1;33m|[m[1;31m/[m [31m/[m  
+[1;31m|[m[1;31m/[m[1;33m|[m [31m|[m   
+[1;31m|[m * [31m|[m [33m8ba7a0009[m qml: update new labels in history and addresscoinlist
+[1;31m|[m * [31m|[m [33m3a22cb9c4[m labels: emit callback when labels received. write labels regardless if there's already a label set for an ID.
+* [1;33m|[m [31m|[m [33md89f9846b[m qt/qrreader(zbar): don't call callback if user closes camera window
+* [1;33m|[m [31m|[m [33mdf1b9a223[m remove qt module from swapserver plugin (unused since a300b8968a)
+* [1;33m|[m [31m|[m [33m7369145a4[m Fix graceful shutdown for lightning swaps
+* [1;33m|[m [31m|[m [33m178a03129[m submarine_swaps: define main_loop, with async with taskgroup
+* [1;33m|[m [31m|[m [33m65210d03a[m qml: log txid when assertion fails in qetxdetails.py
+* [1;33m|[m [31m|[m [33md6c45113e[m trustedcoin: do not db.write() from daemon thread. fixes #8791
+* [1;33m|[m [31m|[m   [33maf6467bac[m Merge pull request #8786 from MrNaif2018/fix/in-memory-wallet
+[1;34m|[m[1;35m\[m [1;33m\[m [31m\[m  
+[1;34m|[m * [1;33m|[m [31m|[m [33mf9d6849b0[m tests: add unit tests for prev
+[1;34m|[m * [1;33m|[m [31m|[m [33m9b5bead6f[m Restore ability to pass wallet in-memory
+* [1;35m|[m [1;33m|[m [31m|[m [33mf7ea2e0d3[m trustedcoin: fix qt wizard two-part-wallet-creation, online phase
+* [1;35m|[m [1;33m|[m [31m|[m [33m66b8ec183[m trustedcoin: rm some dead code
+* [1;35m|[m [1;33m|[m [31m|[m [33m683c6083c[m wizard: do not log sensitive data (add more keys)
+* [1;35m|[m [1;33m|[m [31m|[m [33m77c55d78b[m qt wizard: show warning when trying to restore 2fa seed as std wallet
+* [1;35m|[m [1;33m|[m [31m|[m [33mdab768b93[m qt/wizard/wallet: improve typing: introduce WalletWizardComponent cls
+* [1;35m|[m [1;33m|[m [31m|[m [33m37173845c[m qt wizard: WizardComponent: (fix) also inherit ABC
+* [1;35m|[m [1;33m|[m [31m|[m [33m201c0ab71[m qt wizard: fix restoring from 2fa seed
+* [1;35m|[m [1;33m|[m [31m|[m [33m3b630c7a5[m tests: add "short seed cheat sheet"
+* [1;35m|[m [1;33m|[m [31m|[m   [33m35d4cf4d0[m Merge pull request #8788 from accumulator/qml_non_historic_fiat
+[1;36m|[m[31m\[m [1;35m\[m [1;33m\[m [31m\[m  
+[1;36m|[m * [1;35m|[m [1;33m|[m [31m|[m [33ma51b3bdbf[m qml: show fiat price when historic rates are enabled and no timestamp available
+[1;36m|[m * [1;35m|[m [1;33m|[m [31m|[m [33m5077e013f[m qml: don't show fiat amount when timestamp more than a day old and historic rates are disabled
+[1;36m|[m [1;35m|[m[1;35m/[m [1;33m/[m [31m/[m  
+* [1;35m|[m [1;33m|[m [31m|[m   [33m926756c6c[m Merge pull request #8789 from accumulator/bip21_req_params_validation
+[32m|[m[33m\[m [1;35m\[m [1;33m\[m [31m\[m  
+[32m|[m * [1;35m|[m [1;33m|[m [31m|[m [33mbd88b6ba2[m tests: add unit test for prev
+[32m|[m * [1;35m|[m [1;33m|[m [31m|[m [33m0b7fa9cd9[m bip21: fail bip21 uri if unsupported req-* parameter is present. fixes #8781
+[32m|[m [1;35m|[m[1;35m/[m [1;33m/[m [31m/[m  
+* [1;35m/[m [1;33m/[m [31m/[m [33m313b79cfa[m qml: add txid not empty assert to removeLocalTx. ref #8775
+[1;35m|[m[1;35m/[m [1;33m/[m [31m/[m  
+* [1;33m|[m [31m|[m   [33m88058df40[m Merge pull request #8772 from accumulator/qml_tx_inputs
+[34m|[m[35m\[m [1;33m\[m [31m\[m  
+[34m|[m * [1;33m|[m [31m|[m [33m7164392b1[m qml: add transaction inputs in TxDetails and ConfirmTxDialog, RbfBumpFeeDialog, RbfCancelDialog, CpfpBumpFeeDialog and allow collapse/expand of input/output lists by clicking on label.
+* [35m|[m [1;33m|[m [31m|[m [33m92bff08ba[m qml: don't use predictive text for fields where it makes no sense
+* [35m|[m [1;33m|[m [31m|[m [33m3935e378b[m android: p4a ref d976b539dc7c808d103a7edfe6dc1fd300582a89
+* [35m|[m [1;33m|[m [31m|[m [33mc1ebc4272[m android: p4a ref f534fe9bcd692c4df97e644d34c5bd8acede01eb
+* [35m|[m [1;33m|[m [31m|[m [33me8852918a[m qml: fix newline in TxDetails
+* [35m|[m [1;33m|[m [31m|[m [33meee61a98c[m gui: cpfp: calc parent fee for cpfp using wallet.get_tx_info
+* [35m|[m [1;33m|[m [31m|[m [33mceb42c2a1[m qml: show frozen lightning balance in BalanceDetails only when non-zero
+* [35m|[m [1;33m|[m [31m|[m [33m0dae17339[m qml: add config setting to allow screenshots
+* [35m|[m [1;33m|[m [31m|[m   [33m9ea15a1c3[m Merge pull request #8737 from accumulator/welcome_page
+[36m|[m[1;31m\[m [35m\[m [1;33m\[m [31m\[m  
+[36m|[m * [35m|[m [1;33m|[m [31m|[m [33mebcecdccc[m qt,qml: add checkboxes for advanced network config on welcome page, remove separate proxy-ask and autoconnect pages
+[36m|[m * [35m|[m [1;33m|[m [31m|[m [33m5e39ff49b[m add missing accept handler for welcome page
+[36m|[m * [35m|[m [1;33m|[m [31m|[m [33ma03b2d7ba[m qt,qml: add a welcome page as initial page for server connect wizard
+* [1;31m|[m [35m|[m [1;33m|[m [31m|[m [33md54184dbc[m fix some DeprecationWarnings in python3.12
+* [1;31m|[m [35m|[m [1;33m|[m [31m|[m [33m3d1009f7e[m tests: fix TestLNTransport.test_loop for python 3.12
+* [1;31m|[m [35m|[m [1;33m|[m [31m|[m [33m872ab2943[m android build: bump some security-sensitive packages (py3, ssl)
+* [1;31m|[m [35m|[m [1;33m|[m [31m|[m [33m615cb6669[m appimage build: bump python version (3.10.11->3.10.13)
+* [1;31m|[m [35m|[m [1;33m|[m [31m|[m [33m25c50f15c[m qt TxEditor: fix extraneous "not able to RBF later" warning
+[35m|[m [1;31m|[m[35m/[m [1;33m/[m [31m/[m  
+[35m|[m[35m/[m[1;31m|[m [1;33m|[m [31m|[m   
+* [1;31m|[m [1;33m|[m [31m|[m [33m4908c8c38[m qml: RbfCancelDialog: warning text in frame
+* [1;31m|[m [1;33m|[m [31m|[m   [33md8bd55bf4[m Merge pull request #8758 from accumulator/qml_error_dialogs
+[1;32m|[m[1;33m\[m [1;31m\[m [1;33m\[m [31m\[m  
+[1;32m|[m * [1;31m|[m [1;33m|[m [31m|[m [33m524adaf74[m qml: use warning icon and error title for failure messagedialogs
+* [1;33m|[m [1;31m|[m [1;33m|[m [31m|[m [33m92a08a5fe[m Add Bit2C exchange (#8767)
+* [1;33m|[m [1;31m|[m [1;33m|[m [31m|[m [33mcb34bbee7[m qml: don't enable save button for already saved invoices
+* [1;33m|[m [1;31m|[m [1;33m|[m [31m|[m   [33mbec74304b[m Merge pull request #8759 from accumulator/qml_remove_unused
+[1;34m|[m[1;35m\[m [1;33m\[m [1;31m\[m [1;33m\[m [31m\[m  
+[1;34m|[m * [1;33m|[m [1;31m|[m [1;33m|[m [31m|[m [33madcc9eb2d[m qml: qewallet code style
+[1;34m|[m * [1;33m|[m [1;31m|[m [1;33m|[m [31m|[m [33mc7e055bdb[m qml: remove unused components
+[1;34m|[m[1;34m/[m [1;33m/[m [1;31m/[m [1;33m/[m [31m/[m  
+* [1;33m|[m [1;31m/[m [1;33m/[m [31m/[m [33m2ea723a91[m tests: add test for bip39 utf-8 normalisation
+[1;31m|[m [1;33m|[m[1;31m/[m [1;33m/[m [31m/[m  
+[1;31m|[m[1;31m/[m[1;33m|[m [1;33m|[m [31m|[m   
+* [1;33m|[m [1;33m|[m [31m|[m [33m6e576f2a0[m qml: fix cancelling network wizard not closing app
+* [1;33m|[m [1;33m|[m [31m|[m   [33m1d574808e[m Merge pull request #8762 from SomberNight/202312_qml_wiz_serverconfig
+[31m|[m[31m\[m [1;33m\[m [1;33m\[m [31m\[m  
+[31m|[m [31m|[m[31m_[m[1;33m|[m[31m_[m[1;33m|[m[31m/[m  
+[31m|[m[31m/[m[31m|[m [1;33m|[m [1;33m|[m   
+[31m|[m * [1;33m|[m [1;33m|[m [33m3b5b75325[m qml: WCServerConfig.qml: only disable autoconnect if given server
+[31m|[m[31m/[m [1;33m/[m [1;33m/[m  
+* [1;33m|[m [1;33m|[m [33mbe9dc06aa[m contrib/add_cosigner: print "usage: ..." if called incorrectly
+* [1;33m|[m [1;33m|[m   [33md0276831f[m Merge pull request #8760 from sha-265/patch-1
+[1;33m|[m[33m\[m [1;33m\[m [1;33m\[m  
+[1;33m|[m [33m|[m[1;33m/[m [1;33m/[m  
+[1;33m|[m[1;33m/[m[33m|[m [1;33m|[m   
+[1;33m|[m * [1;33m|[m [33m2a81e84ab[m Update RELEASE-NOTES
+[1;33m|[m[1;33m/[m [1;33m/[m  
+* [1;33m|[m [33m1d4a5052e[m labels plugin: add FIXMEs. don't roll your own crypto...
+* [1;33m|[m [33me08302ac4[m release.sh: fix missing android apk names
+* [1;33m|[m [33m51bc23c92[m build scripts: (trivial) add quotes around some shell variables
+* [1;33m|[m [33ma936e7720[m gitignore: add release-process-related artefacts
+* [1;33m|[m [33m636195bc6[m[33m ([m[1;33mtag: 4.5.0b1[m[33m)[m update version to 4.5.0b1
+* [1;33m|[m [33mb5d8d3172[m plugins: follow-up prev, log thread name when loading plugins
+* [1;33m|[m [33m740016e0d[m hw wallets: fix crashes on macOS
+* [1;33m|[m [33mbf4934bb9[m android build: update p4a fork with qt6 build repro fixes
+* [1;33m|[m [33m2d954bb55[m payserver plugin: remove support for qt GUI. (This plugin is not useful without a daemon)
+* [1;33m|[m [33madb1db57f[m android readme: update commands in "reproducibility fail" section
+* [1;33m|[m [33m9c7b2bd87[m mac build: log hash of .app for quick checking of build-repro
+* [1;33m|[m [33m5f309e95c[m release.sh: don't hardcode ".0" suffix in APK_VERSION
+* [1;33m|[m [33mf4cddd733[m[33m ([m[1;33mtag: 4.5.0b0[m[33m)[m update block header checkpoints
+* [1;33m|[m [33mb21fed014[m update locale submodule
+* [1;33m|[m [33ma027a7036[m prepare release 4.5.0b0
+* [1;33m|[m   [33m856163f09[m Merge pull request #8743 from SomberNight/202312_sighash_warnings
+[34m|[m[35m\[m [1;33m\[m  
+[34m|[m * [1;33m|[m [33m2bc056ed3[m wallet: refactor check_sighash/risk_of_burning_coins_as_fees
+* [35m|[m [1;33m|[m [33m70527f98d[m release notes:  - remove redundant item (already in previous release)  - describe new swap flow in a single place
+* [35m|[m [1;33m|[m [33md691aa073[m qt: add 'notes' tab
+[35m|[m[35m/[m [1;33m/[m  
+* [1;33m|[m [33m52771670f[m tests: add test for wallet.check_sighash
+* [1;33m|[m [33m321f6255f[m qt: do not proceed to wallet setup when cancelling network wizard
+* [1;33m|[m [33me1d0247ce[m wallet: clarify difference between wallet.is_mine and adb.is_mine
+* [1;33m|[m [33ma36e7a4d2[m build: partial rerun freeze_packages
+[1;33m|[m[1;33m/[m  
+* [33m831be3b68[m network: fix issue starting tor probe when proxy disabled
+* [33ma6ceeec09[m qml: add frozen lightning to BalanceDetails, indent frozen on-chain and lightning amounts
+* [33m297f971fa[m qml: improve info text for incomplete transactions and transactions in mempool on transaction details page.
+*   [33mc1b359d43[m Merge pull request #8738 from SomberNight/202312_mac_build
+[36m|[m[1;31m\[m  
+[36m|[m * [33mc98830d09[m mac build: follow-up prev (altool -> notarytool migration)
+[36m|[m * [33m99da6507f[m osx builds: use notarytool
+[36m|[m * [33m86f6e3dbc[m mac build: update README for new macOS 11 build VM
+[36m|[m * [33m77f84060f[m mac build: clang to always target x86_64
+* [1;31m|[m [33mdd3fc041f[m qt main window: statusbar: swap Tor and Network buttons
+* [1;31m|[m [33mc52853341[m qt util: add VLine class, for vertical line separators
+* [1;31m|[m [33mda775954c[m qt wizard: fix wallets directory relative paths on Windows
+* [1;31m|[m [33m58f041fd3[m qt: fix window.donate_to_server to switch to send tab
+* [1;31m|[m   [33me814fa0b2[m Merge pull request #8719 from SomberNight/202312_db_seedtype
+[1;31m|[m[1;33m\[m [1;31m\[m  
+[1;31m|[m [1;33m|[m[1;31m/[m  
+[1;31m|[m[1;31m/[m[1;33m|[m   
+[1;31m|[m * [33mf7cb523b9[m wallet db: deduplicate "seed_type" field
+* [1;33m|[m [33m82ee4c22b[m qml: fix old ref to network.tor_proxy
+* [1;33m|[m [33mee10b0bf3[m qt: move plugins dialog to own module
+* [1;33m|[m   [33m8199a6b5b[m Merge pull request #8733 from accumulator/remove_2fa_email
+[1;34m|[m[1;35m\[m [1;33m\[m  
+[1;34m|[m * [1;33m|[m [33m4c8287358[m qt, qml: remove email entry from 2FA wallet ToS pages
+* [1;35m|[m [1;33m|[m [33md8d2426e8[m qml: add local/remote SCID alias to ChannelDetails
+* [1;35m|[m [1;33m|[m [33md917c27a3[m util: more code-style cleanup
+* [1;35m|[m [1;33m|[m [33mf5340b779[m qt: replace QStackedWidget with custom ResizableStackedWidget, remove unused imports in util
+[1;35m|[m[1;35m/[m [1;33m/[m  
+* [1;33m|[m   [33m1edb5bac8[m Merge pull request #8651 from accumulator/issue_8028
+[1;36m|[m[31m\[m [1;33m\[m  
+[1;36m|[m * [1;33m|[m [33m24323d21a[m qt: add note in wizard if wallet path is outside the default wallets folder
+[1;36m|[m * [1;33m|[m [33mb59e9089a[m qt: use datadir wallets folder consistently
+[1;36m|[m * [1;33m|[m [33m5c9684711[m qt: show wallet as relative path if below datadir wallets folder
+[1;36m|[m * [1;33m|[m [33m786979ec5[m config: keep wallets directory stable, regardless of wallet opens in other directories
+* [31m|[m [1;33m|[m   [33m3f742a14b[m Merge pull request #8716 from accumulator/cosigner_pool_proxy
+[32m|[m[33m\[m [31m\[m [1;33m\[m  
+[32m|[m * [31m|[m [1;33m|[m [33m134fe73f1[m plugins: add proxy aware XMLRPCProxyTransport for xmlrpc.client calls in cosigner plugin
+* [33m|[m [31m|[m [1;33m|[m [33mcfd24dbd6[m small fixes
+* [33m|[m [31m|[m [1;33m|[m [33mb87d091a6[m qt, qml: allow BIP39 seeds which fail checksum or wordlist (fixes #8720)
+* [33m|[m [31m|[m [1;33m|[m   [33m1cc192626[m Merge pull request #8725 from accumulator/bolt11_lowercase
+[34m|[m[35m\[m [33m\[m [31m\[m [1;33m\[m  
+[34m|[m * [33m|[m [31m|[m [1;33m|[m [33m24c28409b[m qt, qml: use lowercase bolt11 when copying or sharing
+* [35m|[m [33m|[m [31m|[m [1;33m|[m [33m15592d498[m followup 0d476f73dfafe0e41e7470d4fd52412ee245a70c
+* [35m|[m [33m|[m [31m|[m [1;33m|[m   [33m134fd6c65[m Merge pull request #8714 from accumulator/tor_probe
+[35m|[m[1;31m\[m [35m\[m [33m\[m [31m\[m [1;33m\[m  
+[35m|[m [1;31m|[m[35m/[m [33m/[m [31m/[m [1;33m/[m  
+[35m|[m[35m/[m[1;31m|[m [33m|[m [31m|[m [1;33m|[m   
+[35m|[m * [33m|[m [31m|[m [1;33m|[m [33m0d476f73d[m network: rename network.tor_proxy to network.is_proxy_tor and keep it at None until TOR probe is done.
+[35m|[m * [33m|[m [31m|[m [1;33m|[m [33m90d1d587e[m network: async tor probe
+* [1;31m|[m [33m|[m [31m|[m [1;33m|[m [33ma1f3779f8[m update RELEASE-NOTES
+* [1;31m|[m [33m|[m [31m|[m [1;33m|[m   [33m6745fb47b[m Merge pull request #8724 from xiaolou86/master
+[1;33m|[m[1;33m\[m [1;31m\[m [33m\[m [31m\[m [1;33m\[m  
+[1;33m|[m [1;33m|[m[1;33m_[m[1;31m|[m[1;33m_[m[33m|[m[1;33m_[m[31m|[m[1;33m/[m  
+[1;33m|[m[1;33m/[m[1;33m|[m [1;31m|[m [33m|[m [31m|[m   
+[1;33m|[m * [1;31m|[m [33m|[m [31m|[m [33m50e5b0efd[m electrum: fix typos
+[1;33m|[m * [1;31m|[m [33m|[m [31m|[m [33m00c584d55[m contrib: fix typos
+[1;33m|[m[1;33m/[m [1;31m/[m [33m/[m [31m/[m  
+* [1;31m|[m [33m|[m [31m|[m [33m64f82cd26[m qt wizard bip39 recovery: better handle --offline mode
+* [1;31m|[m [33m|[m [31m|[m [33m5d178d3a7[m qt wizard: clear up some log messages
+[31m|[m [1;31m|[m[31m_[m[33m|[m[31m/[m  
+[31m|[m[31m/[m[1;31m|[m [33m|[m   
+* [1;31m|[m [33m|[m [33m05758432d[m android: exclude more unnecessary directories
+[33m|[m [1;31m|[m[33m/[m  
+[33m|[m[33m/[m[1;31m|[m   
+* [1;31m|[m [33m03778b6e0[m add FIXMEs to instances where we don't use the network proxy
+* [1;31m|[m [33m80e330d36[m build: update pinned aiohttp-socks (partial rerun freeze_packages)
+* [1;31m|[m [33me441d4b15[m release-sh: build each android apk separately
+* [1;31m|[m   [33m6c213aca1[m pyinstaller build fixes
+[1;34m|[m[1;35m\[m [1;31m\[m  
+[1;34m|[m * [1;31m|[m [33m9743bd521[m pyinstaller build: (trivial) format so that win/osx look more similar
+[1;34m|[m * [1;31m|[m [33mb551cb5f7[m pyinstaller build: better parameterise .spec
+[1;34m|[m * [1;31m|[m [33m0912e5615[m pyinstaller build: follow-up: dirty hack for duplicate plugins
+[1;34m|[m * [1;31m|[m [33m4cc9ef207[m pyinstaller build: clean-up .spec, fix issue described in prev commit
+[1;34m|[m * [1;31m|[m [33mb5f1783a6[m plugins: better error and logging on duplicate plugins
+[1;34m|[m * [1;31m|[m [33m2c3c50a09[m mac build: fix pyinstaller erroring due to not being able to import pyqt6
+[1;34m|[m * [1;31m|[m [33m1451ec936[m win/mac build: fix pyinstaller missing libsecp during part of Analysis
+[1;34m|[m * [1;31m|[m [33m262c009c6[m pyinstaller build: towards fixing missing "gui/common_qt" folder
+* [1;35m|[m [1;31m|[m [33m8c404f319[m qt: translate string, wording minimum channel amount in new_channel_dialog
+[1;31m|[m [1;35m|[m[1;31m/[m  
+[1;31m|[m[1;31m/[m[1;35m|[m   
+* [1;35m|[m [33mdaeedca1d[m config: use str type for NETWORK_PROXY, NETWORK_PROXY_USER, NETWORK_PROXY_PASSWORD
+* [1;35m|[m [33m70da74166[m network: no assert for port number range check
+* [1;35m|[m [33m42f2eb381[m qt: network_dialog: remove now unnecessary proxy host contains colon check
+* [1;35m|[m [33m26b5bec5a[m qml: small text change in proxy settings
+* [1;35m|[m [33m297568a14[m network: remove resolver monkey-patch as no local hostname lookups are performed when enabling SOCKS5 proxy.
+* [1;35m|[m [33m667485b17[m network: split off proxy_user and proxy_pass from serialized proxy string and add separate cmdline params and config keys for them. support parsing both old style mode:host:port:user:pass and new mode:host:port, where new form also accepts IPv6 addresses
+* [1;35m|[m [33m7b96a8335[m wallet: add sighash check to class Abstract_Wallet qml: use backend sighash check and add user confirmation path qt: use backend sighash check and add user confirmation path qml: include get_warning_for_risk_of_burning_coins_as_fees test in txdetails qt: add warning icon to sighash warning add sighash and fee checks to wallet.sign_transaction, making all warnings fatal unless ignore_warnings is set to True tests: test sign_transaction on both code paths with ignore_warnings True and False, raise specific exceptions TransactionPotentiallyDangerousException and TransactionDangerousException
+[1;35m|[m[1;35m/[m  
+* [33m6467db0b7[m json_db: rename "_write" to sth more descriptive
+* [33mae9767880[m ui: add icons for script type and deterministic wallet
+* [33m85f13cc6e[m load_keystore: deepcopy object so that it differs from the one in db.data
+* [33m6efd1fc76[m followup prev
+* [33mc16b83f46[m tests: add test verifying if privkey add to existing imported wallet persists correctly.
+* [33mff5392581[m qt console: fix tracebacks in windows binaries
+* [33mb18f9570f[m qml wizard: fix creating imported wallet from camera: concat with space
+* [33maffe3630b[m qt: addr/coins tab: show tooltip for "freeze address"
+* [33mab9c3bb9b[m qt: avoid potential proxy settings deserialization problems (fixes #8652)
+* [33m6f9e86a1a[m qml: fix wrong year near newyear in transaction list
+*   [33mf602b2bbe[m Merge pull request #8700 from SomberNight/202311_apk_build
+[1;36m|[m[31m\[m  
+[1;36m|[m * [33mf14e99139[m android build: we always want apks, as we want to use our own privkey
+[1;36m|[m[1;36m/[m  
+* [33m8db68cadc[m swaps: forward swap: make cltv requirements explicit
+* [33m9f1b8613d[m swaps: code style clean-up, add type hints, force kwargs
+* [33m9d5d58275[m swaps: forward swap: (fix) propagate channels parameter
+* [33m7f64ecc4b[m wallet.bump_fee: the glorious return of BumpFeeStrategy :D
+* [33m03dd38bfb[m qml: add support for ln address and openalias, fix lnurl finalize step, avoid overloading invoiceParser with new payment identifiers while potentially long-running resolve/finalize steps are ongoing, show errors inresolve/finalize steps to user.
+* [33mff77013a8[m qml: check if self._orig_tx is valid. fixes #8407
+* [33mb098be988[m qml: show channel close tx(id) in ChannelDetails
+* [33m6a8fb2688[m (trivial) follow-up prev
+* [33m4cdd199f5[m lnworker: add/fix some type hints, add some comments
+* [33m1cc92d489[m trampoline forwarding: before failing payment, wait until all htcs have failed and session is not longer active.
+* [33m9b1c40e39[m Refactor payment forwarding:  - all forwarding types use the same flow  - forwarding callback returns a htlc_key or None  - forwarding info is persisted in lnworker:    - ongoing_forwardings    - downstream to upstream htlc_key    - htlc_key -> error_bytes
+* [33mf1c63e2d5[m commands: make payto/etc respect 'confirmed_only' config var
+* [33mc4068ab6c[m swaps: add small comment
+* [33m835992c7e[m lnworker: remove if statements where the condition is always True.
+* [33ma57a0d001[m qml: make TextAreas more visible
+* [33mf8eb2e8cf[m qml: resize menus according to content
+* [33m4ab973f93[m followup 3793a6b6b6314f93427ff6aef63fa06bbfe0f905, remove leftovers
+* [33m3793a6b6b[m qml: use highlight pane for QR codes, refactor ReceiveDialog invoice select UI.
+* [33m86a45c668[m few small fixes
+* [33m621a397b7[m i18n: translate a few untranslated strings and avoid early translate for pr_tooltips and pr_expiration_values fixes #8689
+* [33m4006a2f54[m SECURITY.md: small clean-up
+* [33m6ffaf7c52[m lnworker: (followup prev) set .config in baseclass init, not subclasses
+* [33m7447cf9dc[m lnworker: always initialize self.config in constructor
+*   [33m6865204d7[m Merge pull request #8671 from spesmilo/just_in_time_channels
+[32m|[m[33m\[m  
+[32m|[m * [33m7bebd62f1[m zerofonf trusdted node: use NetworkRetryManager method _can_retry_addr
+[32m|[m * [33ma338459d4[m just-in-time channels:  - a node scid alias is derived from the node ID  - the channel opening fee is sent in a TLV field of open_channel  - the server requires htlc settlement before broadcasting    (server does not trust client)
+[32m|[m * [33m816e617aa[m option_zeroconf
+* [33m|[m [33me5fae1d68[m util.NetworkRetryManager: better document API
+* [33m|[m [33m94b1df4a0[m qml: small UI fix, wording.
+[33m|[m[33m/[m  
+* [33m96e143b6c[m lnpeer: abort send_revoke_and_ack and maybe_send_commitment if channel is closed. fixes #8684
+* [33m98f9f295c[m fix #8683; do not force close channel if we just sent update_fulfill_htlc
+*   [33m4a3a61c6b[m Merge pull request #8678 from accumulator/qml_password_strength
+[34m|[m[35m\[m  
+[34m|[m * [33m98264f64a[m qml: introduce PasswordStrengthIndicator control, and add to PasswordDialog and WCWalletPassword
+* [35m|[m [33md1d4e1955[m qml: txdetails: add lockDelay property when height is TX_HEIGHT_FUTURE and add mempool depth for height TX_HEIGHT_UNCONF_PARENT
+* [35m|[m   [33mde0dc93a9[m Merge pull request #8675 from accumulator/address_delete
+[36m|[m[1;31m\[m [35m\[m  
+[36m|[m * [35m|[m [33me011bd235[m qml: implement delete address for imported wallets, and fix address list on address/key add.
+[36m|[m [35m|[m[35m/[m  
+* [35m|[m   [33m4252c3021[m Merge pull request #8682 from accumulator/about_version
+[1;32m|[m[1;33m\[m [35m\[m  
+[1;32m|[m * [35m|[m [33m42f323ac8[m qml: remove APK version, add Qt and PyQt version strings to About page
+* [1;33m|[m [35m|[m [33m396732384[m qml: refactor ChannelDetails. Add funding outpoint
+* [1;33m|[m [35m|[m [33m2995bc8b3[m qml: fix dialog not closing if dialog is shown/hidden more than once most dialogs are destroyed when closed, therefore not hitting this bug, but e.g. ChannelOpenProgressDialog is reused.
+[1;33m|[m[1;33m/[m [35m/[m  
+* [35m|[m [33m0fb47c87d[m qml: fixes for CloseChannelDialog; - split RequestForceClose and LocalForceClose options, as request force close is only available if connected. - disable no close policy on dialog, as it locks the user in the dialog if no succesful close is initiated.   what this intended to do is keep the backing object QEChannelDetails alive until a result is obtained, to avoid   exceptions when emitting the result signal. this is now handled more robustly, the user can leave the dialog   without triggering exceptions later.
+* [35m|[m [33mfb4eb86e7[m submarine swaps: remove support for 'old' normal swaps, where the user has the preimage.
+* [35m|[m [33m300c3bbd3[m submarine_swaps: rename variable for clarity
+[35m|[m[35m/[m  
+* [33md49e1bb32[m contrib/android/Readme.md: update "how to run qml gui on linux" section
+*   [33m5ba156fca[m Merge remote-tracking branch 'remotes/accumulator/qt6'
+[1;34m|[m[1;35m\[m  
+[1;34m|[m * [33m047cc6f95[m qml: remove attempt to unfocus by clicking dialog background Doesn't really work as it triggers on events above the background it is defined on :(
+[1;34m|[m * [33m8798a45d7[m qml: fix issue with width of fiat textedit on ReceiveDetailsDialog
+[1;34m|[m * [33m1544a7154[m qml qr scanner: make xml layout look nicer
+[1;34m|[m * [33m58ff76adc[m android: correctly describe buildozer branch used
+[1;34m|[m * [33m55c01bda9[m android: set target_sdk_version to 33
+[1;34m|[m * [33m11d39cd94[m qml: fix keyboard exclusion zone
+[1;34m|[m * [33m32c1915de[m qml: restore Send/ScanDialog for desktop/dev, keeping qr scan Activity for android only. Also use stable R package, regardless of APP_PACKAGE_DOMAIN used in build.
+[1;34m|[m * [33m5c3e14d8d[m qml: replace Send/ScanDialog with java bases zxing qr scan activity.
+[1;34m|[m * [33mc33ee8754[m android: restore SimpleScannerActivity.java that was used in kivy
+[1;34m|[m * [33mb9ab0f63e[m qt6: update buildozer ref to ce4f2257249fdf4ff1f4cb8983fd7ac44174a274
+[1;34m|[m * [33mbe801f30e[m gui: make common_qt compatible with both Qt5 and Qt6
+[1;34m|[m * [33mdb532dbd1[m qml: android back-gesture conflict hack not working on qt6, replace with simple properties
+[1;34m|[m * [33me561ce211[m cirrus: task timeout 90m
+[1;34m|[m * [33ma77ff9943[m qml: refactor qr scan to qt6
+[1;34m|[m * [33m65d41ccc4[m qml: qualify all signal handler parameters
+[1;34m|[m * [33mae446377f[m qml: work around toolbar layout not right-aligning indicators when indicators toggle visibility
+[1;34m|[m * [33m8b567ae44[m qml: remove all QML imports version numbers
+[1;34m|[m * [33m6270eae5c[m qml: port PyQt5 to PyQt6
+[1;34m|[m * [33m0441cb0ad[m qml: exclude payserver plugin for qml
+[1;34m|[m * [33mbf6163b4f[m android: update p4a ref to 3b3733dbf5f461e197ba83887ac0d3b6d0f1c396 buildozer ref to 698b48136c55b2495128207c5e98dccc128bb6c2
+[1;34m|[m * [33m770a32cf6[m qt6: update recipe pins, NDK, SDK, Ant, use venv for buildozer/p4a, add tomli recipe
+[1;34m|[m * [33m16d3db95a[m qt6: update android build container to bookworm
+* [1;35m|[m [33mf708e7f03[m wizard/wallet: clean up imports, code style warnings.
+* [1;35m|[m [33ma6432732f[m qml: addresses/coins filter match case insensitive, don't match 'None' for undefined fields
+[1;35m|[m[1;35m/[m  
+* [33mf98602918[m Revert "Update .cirrus.yml"
+* [33m7c2131209[m config: handle better if data dir disappears while we are running
+* [33md6a6f56dd[m qml: add ice crystal icon and use for (un)freeze buttons.
+* [33m4671c002c[m qt: fix detected account select (#8673)
+*   [33me8f5aa50c[m Merge pull request #8653 from accumulator/addresses_coins_filter
+[1;36m|[m[31m\[m  
+[1;36m|[m * [33mc694415b4[m qml: add addresslist filter persistence
+[1;36m|[m * [33me88cf0a68[m qml: addresses list formatting, add txid/outpoint and amount to filter
+[1;36m|[m * [33mcf91d2e5c[m qml: also show coins in Addresses page, and add a few filter options. Additionally, long press now activates multi-select mode, and add action to (un)freeze selection.
+* [31m|[m [33m6ce8a583f[m qt: add missing case for on-chain fallback for BIP21 payment identfier containing lightning invoice
+* [31m|[m [33mccbac96f9[m (trivial) contacts: add some type hints
+* [31m|[m [33m511674a53[m contacts: fix adding new contacts
+[31m|[m[31m/[m  
+* [33mec8500bd5[m payment_identifier: if a bip21 uri contains a lightning invoice without fallback address, and an address is present in the bip21 uri path, register the on-chain address in the Invoice.outputs field to allow paying onchain from a saved Invoice later (when the PI is unavailable). Fixes #8654
+* [33maf61b9d86[m qml: also add share option for fallback address in InvoiceDialog
+* [33m6c5192757[m qml: emit error when bip21 contains neither an address nor a lightning invoice (fixes #8662)
+* [33m711a32508[m main_window: split out "walet info" dlg into separate file
+* [33m306037289[m qt wizard: WCHaveMasterKey: use check_multisig_constraints
+* [33m4b2d8f062[m qt wizard: fix WCHaveMasterKey for first multisig cosigner
+* [33m7df057aaf[m qt wizard: simplify WCHaveSeed
+* [33m33ac0b459[m Update .cirrus.yml
+* [33ma7f0c90c8[m Add pow_hash_header abstraction (#7592)
+* [33ma3d7df48d[m Cirrus: Mark E722 linter as mandatory (#8668)
